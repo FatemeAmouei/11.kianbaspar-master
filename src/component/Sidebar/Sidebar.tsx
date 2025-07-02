@@ -108,8 +108,10 @@ const Sidebar: FC = () => {
                     activeItemId === item.id ? styles.menuItemActive : ""
                   }`}
                 >
-                  {item.icon}
-                  {item.label}
+                  <div className={styles.menuItemRight}>
+                    {item.icon}
+                    {item.label}
+                  </div>
                   {isOpenMenuId === item.id ? (
                     <IoIosArrowBack size={8} />
                   ) : (
@@ -144,8 +146,10 @@ const Sidebar: FC = () => {
               </>
             ) : (
               <Link href={item.href || "#"} className={styles.menuItem}>
-                {item.icon}
-                {item.label}
+                <div className={styles.menuItemRight}>
+                  {item.icon}
+                  {item.label}
+                </div>
                 <IoIosArrowDown size={8} />
               </Link>
             )}
@@ -156,7 +160,6 @@ const Sidebar: FC = () => {
       <div onClick={logoutHandler} className={styles.Footer}>
         <span className={styles.info}>kianbaspar | ERP 2025-2026</span>
         <div className={styles.logout}>
-          {" "}
           <MdLogout />
           خروج
         </div>

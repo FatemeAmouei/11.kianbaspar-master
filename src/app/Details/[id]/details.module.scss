@@ -7,6 +7,10 @@
   direction: rtl;
 }
 
+.breadCrumb {
+  width: 100%;
+}
+
 .breadCrumbOl {
   display: flex;
   gap: 0.5rem;
@@ -22,10 +26,13 @@
   color: #888;
 }
 
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .detailContent {
   width: 60%;
-  margin-right: 20rem;
-  margin-top: 2rem;
 }
 
 .title {
@@ -45,10 +52,12 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
 .inputRow2 {
   margin-left: 2rem;
   margin-bottom: 1rem;
 }
+
 .inputDiv {
   display: flex;
   flex-direction: column;
@@ -60,12 +69,14 @@
   color: #333;
 }
 
-.formInput {
+.formInput,
+.codeinput {
   border: 1px solid #007aff;
   background-color: rgb(179, 201, 238);
   padding: 0.5rem;
   border-radius: 4px;
   transition: border-color 0.3s;
+
   &:focus {
     outline: none;
     border-color: #1bb8b6;
@@ -74,15 +85,6 @@
 
 .codeinput {
   margin-left: 2rem;
-  border: 1px solid #007aff;
-  background-color: rgb(179, 201, 238);
-  padding: 0.5rem;
-  border-radius: 4px;
-  transition: border-color 0.3s;
-  &:focus {
-    outline: none;
-    border-color: #1bb8b6;
-  }
 }
 
 .submitBtn {

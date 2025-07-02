@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, Fragment } from "react";
+import { useState, Fragment, useEffect } from "react";
 import styles from "@/component/Warehouse/warehouseTable/WarehouseTable.module.scss";
 import { WarehouseItem } from "@/component/Warehouse/warehouse.data";
 import RowDetails from "@/component/Warehouse/RowDetails/RowDetails";
@@ -26,7 +26,7 @@ export default function WarehouseTable() {
   );
   const [date, setDate] = useState<DateObject | null>(null);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [isOpenMenuId, setIsOpenMenuId] = useState(false);
+  const [isCategoryOpen, setIsCategoryOpen] = useState(false);
 
   const [operationOpenMenu, setOperationOpenMenu] = useState<string | null>(
     null
@@ -34,7 +34,7 @@ export default function WarehouseTable() {
   const router = useRouter();
 
   const handleToggleMenu = () => {
-    setIsOpenMenuId((prev) => !prev);
+    setIsCategoryOpen((prev) => !prev);
   };
 
   const toggleRow = (id: string): void => {
@@ -108,7 +108,7 @@ export default function WarehouseTable() {
               × فیلترها
             </button>
             <button
-              className={styles.deleteButton}
+              className={styles.deleteFilter}
               onClick={() => setIsFilterOpen(false)}
             >
               حذف فیلتر
@@ -118,17 +118,17 @@ export default function WarehouseTable() {
           <div>
             <ul className={styles.filterList} onClick={handleToggleMenu}>
               دسته بندی
-              {isOpenMenuId ? (
+              {isCategoryOpen ? (
                 <IoIosArrowDown size={8} />
               ) : (
                 <IoIosArrowBack size={8} />
               )}
             </ul>
           </div>
-          {isOpenMenuId && (
+          {isCategoryOpen && (
             <div
               className={`${styles.dropdown} ${
-                isOpenMenuId ? styles.show : ""
+                isCategoryOpen ? styles.show : ""
               }`}
             >
               <ul className={styles.dropdownList}>
@@ -138,7 +138,7 @@ export default function WarehouseTable() {
                 <li className={styles.dropdownItem}>کیمدی</li>
                 <li className={styles.dropdownItem}>نیمه ساخته</li>
                 <li className={styles.dropdownItem}>اداری</li>
-                <li className={styles.dropdownItem}>تجهیزان کامپیوتری</li>
+                <li className={styles.dropdownItem}>تجهیزات کامپیوتری</li>
                 <li className={styles.dropdownItem}>مواد اولیه چاپی</li>
                 <li className={styles.dropdownItem}>فوتبال</li>
                 <li className={styles.dropdownItem}>کارتهای فوتبالی</li>
@@ -171,7 +171,7 @@ export default function WarehouseTable() {
                     <IoIosArrowBack className={styles.requestNumIcon} />
                   )}
                   {row.requestNum}
-                </td>{" "}
+                </td>
                 <td>{row.requestDate}</td>
                 <td>{row.name}</td> <td>{row.sendTo}</td>
                 <td style={{ position: "relative" }}>
@@ -192,7 +192,7 @@ export default function WarehouseTable() {
                     >
                       <TfiMenuAlt />
                     </button>
-                    <span className={styles.expandtext}>عملیات انتخاب</span>
+                    <span>عملیات انتخاب</span>
                   </div>
 
                   {operationOpenMenu === row.id && (
@@ -217,7 +217,6 @@ export default function WarehouseTable() {
                       <div
                         onClick={() => {
                           alert(`ویرایش:${row.id}`);
-                          setOperationOpenMenu(null);
                           setOperationOpenMenu(null);
                         }}
                         className={styles.dropdownBtn}

@@ -135,7 +135,9 @@ const AddProductForm = () => {
     "اموال قابل رسید",
   ];
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     const { name, value, type, checked } = e.target;
 
     if (type === "checkbox") {

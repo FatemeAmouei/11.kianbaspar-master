@@ -10,7 +10,7 @@ export interface Item {
 
 export interface WarehouseItemType {
   id: string;
-  requestNum: number;
+  requestNum: string | number;
   name: string;
   requestDate: string;
   sendTo: string;
