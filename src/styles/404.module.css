@@ -1,0 +1,42 @@
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0;
+  background-color: #eee;
+  height: 95vh;
+}
+
+.number {
+  z-index: -1;
+  font-size: 25em;
+  text-shadow: 28px 21px #8fb9e6;
+  color: #007bff;
+  margin: 0;
+}
+
+@keyframes rings {
+  to {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+  }
+}
+
+.texts {
+  font-size: 1.5em;
+  text-align: center;
+  direction: rtl;
+  color: #007bff;
+  margin-top: 1rem;
+  padding-top: 0;
+  height: 30%;
+}
+
+.texts a {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-bottom: 1rem;
+}

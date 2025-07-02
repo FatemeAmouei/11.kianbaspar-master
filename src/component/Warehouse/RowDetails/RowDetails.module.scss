@@ -1,0 +1,71 @@
+.tableTh {
+  display: flex;
+  justify-content: flex-start;
+  color: #888;
+  font-size: 13px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.tableThRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  p {
+    padding-left: 1rem;
+  }
+}
+
+.tableThLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  p {
+    padding-left: 1rem;
+  }
+}
+
+.innerTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 0.5rem;
+
+  th,
+  td {
+    border-bottom: 1px solid #ccc;
+    font-size: 0.85rem;
+    color: #888;
+  }
+  thead th {
+    background: #f0f4ff;
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+  }
+  tbody {
+    tr {
+      border-bottom: 1px solid #ccc;
+      padding: 1rem 0;
+    }
+  }
+}
+
+.activeRow {
+  border: 1px solid #000;
+  border-color: #ccc;
+  border-radius: 5px;
+  z-index: 10;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-bottom: 1rem;
+}
+
+.editBtn {
+  color: #e9a537;
+  border: 1px solid #e9a537;
+  padding: 0.3rem 1.5rem;
+  font-weight: 500;
+  font-size: 0.8rem;
+}

@@ -1,0 +1,54 @@
+$primary: #007bff
+$gray-100: #f7f9fc
+$gray-200: #f3f6fb
+
+@font-face
+  font-family: 'IRANSansMobile'
+  src: url('/fonts/IRANSansMobile.woff2') format('woff2'), url('/fonts/IRANSansMobile.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  font-family: IRANSansMobile, sans-serif
+  background: $gray-100
+  direction: rtl
+
+.page-title
+  text-align: center
+  background: $primary
+  color: #fff
+  padding: 1.2rem 0
+  font-size: 2.2rem
+  margin: 0 0 1rem
+  border-radius:0.5rem
+
+.container
+   max-width: 1222px
+   margin: 0 auto
+
+.main
+  flex: 1
+  display: flex
+  flex-direction: row
+  height: 100%
+  overflow: hidden
+
+.topbar
+  background: #fff
+  border-bottom: 1px solid $gray-200
+
+
+.sidebar
+  width: 20%
+  background-color: #fff
+  border-left: 1px solid $gray-200
+  height: 100%
+
+.content
+  width: 80%
+  overflow-y: auto
+  height: 100%

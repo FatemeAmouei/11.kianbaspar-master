@@ -1,0 +1,325 @@
+.tableWrapper {
+  padding: 1rem;
+  direction: rtl;
+  background: #fff;
+  box-shadow: 0 0 10px #ccc;
+  min-height: 74vh;
+  max-height: 74vh;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 5vh;
+  justify-content: start;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-top: 0;
+  padding: 0.5rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  p {
+    padding-right: 0.8rem;
+    padding-bottom: 0.2rem;
+  }
+}
+
+.toolbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.toolbarright {
+  display: flex;
+  width: 80%;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
+.toolbarleft {
+  display: flex;
+  width: 20%;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
+.inputSearch {
+  width: 40%;
+  position: relative;
+  padding: 0 0.5rem;
+
+  input {
+    padding: 0 3rem 0 8rem;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    background: transparent;
+    cursor: pointer;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border: none;
+    font-size: 1rem;
+  }
+}
+
+.option {
+  padding: 0 0.5rem;
+  height: 40px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #666;
+}
+
+.searchBtn {
+  cursor: pointer;
+  padding: 0.2rem 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.deletebutton {
+  color: #007bff;
+  background-color: white;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 0.6rem;
+
+  &:hover {
+    background-color: #0056b3;
+    color: #fff;
+  }
+}
+
+.filterbutton {
+  position: relative;
+  padding: 0.2rem 1.2rem 0.2rem 0.5rem;
+  margin-left: 0.6rem;
+  background: #fff;
+  border: 1px solid #007bff;
+  color: #007bff;
+
+  button {
+    position: absolute;
+    top: 50%;
+    right: 0.2rem;
+    transform: translateY(-50%);
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007bff;
+    border: none;
+  }
+}
+
+.sortbutton {
+  cursor: pointer;
+  padding: 0.2rem 0.7rem;
+  color: #666;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 1px solid #ccc;
+}
+
+.filterSidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1000;
+  padding: 20px;
+  overflow-y: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.filterHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 1rem;
+}
+
+.closeButton {
+  gap: 0.5rem;
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #333;
+}
+
+.deleteButton {
+  font-size: 15px;
+  border: none;
+  color: #e9a537;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.filterList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #333;
+
+  &:hover {
+    background-color: #f2f6ff;
+  }
+}
+
+.dropdown {
+  display: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.show {
+  display: block;
+}
+
+.dropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  color: #e9a537;
+
+  &:hover {
+    color: #be7909;
+    font-weight: bold;
+    background-color: #e1edff;
+  }
+}
+
+.table {
+  width: 90%;
+  border-collapse: collapse;
+  text-align: center;
+
+  th,
+  td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+    height: 5vh;
+  }
+
+  th {
+    background-color: #f3f6fb;
+    font-weight: bold;
+  }
+
+  td {
+    color: #333;
+    padding: 0 1rem;
+    margin: 0;
+  }
+}
+
+.requestNumdiv {
+  display: flex;
+  justify-content: center;
+  border: none;
+  font-size: 0.8rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.requestNumIcon {
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #ccc;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.expanddiv {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: #e9a537;
+  border: 1px solid #e9a537;
+  font-size: 0.8rem;
+  cursor: pointer;
+  align-items: center;
+
+  &:hover {
+    background-color: #e9a537;
+    color: #fff;
+    border-radius: 2px;
+  }
+}
+
+.activeBtn {
+  background-color: #e9a537;
+  color: #fff;
+}
+
+.expandBtn {
+  background-color: transparent;
+  color: #e9a537;
+  border: none;
+  padding-top: 0.5rem;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  z-index: 10;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 10px;
+  padding: 0.5rem 1.2rem;
+}
+
+.dropdownBtn {
+  &:hover {
+    color: #888;
+  }
+}
+.dropdownMenu div {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}

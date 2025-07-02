@@ -1,0 +1,130 @@
+.sidebar {
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #eee;
+  direction: rtl;
+  font-family: "IRANSans", sans-serif;
+  font-size: 0.8rem;
+  padding: 1rem 0;
+  text-decoration: none;
+  height: 74vh;
+}
+
+.sidebar_main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0 1rem;
+  margin: 0;
+  list-style: none;
+}
+
+.menuWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    color: #007aff;
+    font-weight: bold;
+    background-color: #e1edff;
+  }
+}
+
+.dropdown {
+  display: none;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.show {
+  display: block;
+}
+
+.dropdownList {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.75rem 3rem;
+  text-decoration: none;
+  color: #333;
+
+  &:hover {
+    color: #007aff;
+    font-weight: bold;
+    background-color: #e1edff;
+  }
+}
+
+.menuItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: #333;
+
+  &:hover {
+    background-color: #f2f6ff;
+  }
+  &:active {
+    color: #007aff;
+    font-weight: bold;
+  }
+}
+
+.menuItemActive {
+  color: #007aff;
+  font-weight: bold;
+  background-color: #e1edff;
+}
+
+.Footer {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.info {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.6rem;
+  color: #333;
+}
+
+.logout {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  gap: 0.5rem;
+  padding: 14px 20px;
+  border-top: 1px solid #eee;
+  font-size: 15px;
+  color: red;
+  text-align: right;
+  &:hover {
+    opacity: 0.6;
+  }
+}
