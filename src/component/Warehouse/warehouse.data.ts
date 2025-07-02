@@ -68,7 +68,7 @@ const data = [
     name: "مواد اولیه",
     requestNum: 2,
     requestDate: " 12:08:00 | 1401/10/19",
-    sendTo: "فروش",
+    sendTo: "فروش نمایندگی",
 
     items: [
       {
